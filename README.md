@@ -1,1 +1,1 @@
-# OpenCV-object-detection
+# opencv-model-project
