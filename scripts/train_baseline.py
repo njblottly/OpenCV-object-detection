@@ -19,10 +19,10 @@ def main() -> None:
 
     results = model.train(
         data=str(data_yaml),
-        epochs=11,
+        epochs=20,
         imgsz=640,
         batch=8,
-        workers=11,
+        workers=20,
         device="mps",
         pretrained=True,
         project="runs",
