@@ -135,6 +135,21 @@ def main() -> None:
         prev_time = now
         fps = 1.0 / dt if dt > 0 else 0.0
 
+        # Track on current frame
+        results = model.track(
+            frame,
+            persist=True,
+            conf=args.conf,
+            imgsz=args.imgsz,
+            tracker=args.tracker,
+            verbose=False,
+        )
+
+        annotated = frame.copy()
+        result = results[0]
+
+        current_ids: set[int] = set()
+
 # April 28 Ending
 
 
